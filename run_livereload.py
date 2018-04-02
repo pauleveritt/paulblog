@@ -15,6 +15,4 @@ if __name__ == '__main__':
     server = get_server()
     server.watch('docs/**', shell(sphinx),
                  ignore=lambda s: '_build' in s)
-    server.watch('kaybee_bulma/**/*.html', shell(sphinx))
-    server.watch('kaybee_bulma/**.py', shell(sphinx))
     server.serve(root='docs/_build', live_css=False)
